@@ -7,7 +7,18 @@ type Props = {
 };
 
 function Editor({ theme = "oneDark", lang = "jsx" }: Props) {
-  const [code, setCode] = useState('console.log("Hello, World!");');
+  const [code, setCode] = useState(
+    `import React from 'react'
+
+function Home() {
+  return (
+    <h1>Hello, World!</h1>
+  )
+}
+
+export default Home;
+`
+  );
 
   return (
     <section className="relative text-base font-mono mx-auto">
